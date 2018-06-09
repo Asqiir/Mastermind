@@ -51,12 +51,6 @@ public class ConsoleView extends TextView {
 	}
 
 	@Override
-	public void fensterNeuZeichnen() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void fensterNeuZeichnen(ActionListener al) {
 		// TODO Auto-generated method stub
 		

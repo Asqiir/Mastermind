@@ -72,9 +72,4 @@ public abstract class View {
 		}
 		else { return "UNDEFINED ERROR"; }
 	}
-
-	public void fensterNeuZeichnen() {
-		// TODO Auto-generated method stub
-		
-	}
 }
