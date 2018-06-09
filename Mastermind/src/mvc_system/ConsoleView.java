@@ -25,16 +25,19 @@ public class ConsoleView extends TextView {
 	@Override
 	public void nächsteRundeBereit() {
 		String s;
+		Code c;
 		
 		try {
-			s = reader.readLine();
-			String[] eingaben = s.split(" ");
-			Code c = new Code(model);
+			do {
+				s = reader.readLine();
+				String[] eingaben = s.split(" ");
+				c = new Code(model);
 			
-			for(int i = 0; i < model.getLösungsanzahl(); i++) {
+				for(int i = 0; i < model.getLösungsanzahl(); i++) {
 						int e = Integer.parseInt(eingaben[i]);
 						c.setNummer(i,e);
-			}
+				}
+			} while(c == null || !c.isValid());
 			fireEvent(c);
 		}
 /*!!!*/		catch(Exception e) { // Ich muss rauskriegen, welche exceptions geworfen werden!

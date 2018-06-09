@@ -7,7 +7,7 @@ public class Controller implements CodeListener {
 	private View view;
 	
 	public static void main(String[] args) {
-		new Controller(new Model(), new FrameView());
+		new Controller(new Model(), new ConsoleView());
 	}
 	
 	public Controller(Model m, View v) {

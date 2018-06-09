@@ -16,6 +16,19 @@ public class Code {
 			setNummer(i, nummern[i]);
 		}		
 	}
+	
+	public boolean isValid() {
+		return nummern[0] != nummern[1] &&
+				nummern[0] != nummern[2] &&
+				nummern[0] != nummern[3] &&
+				nummern[0] != nummern[4] &&
+				nummern[1] != nummern[2] &&
+				nummern[1] != nummern[3] &&
+				nummern[1] != nummern[4] &&
+				nummern[2] != nummern[3] &&
+				nummern[2] != nummern[4] &&
+				nummern[3] != nummern[4];
+	}
 
 	public void setNummer (int stelle, int nummer) {
 		nummern[stelle] = nummer;
