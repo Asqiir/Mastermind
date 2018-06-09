@@ -16,22 +16,34 @@ public abstract class TextView extends View {
 	@Override
 	public void nächsteRundeBereit() { }
 	
-	public Code textToCode(String s) {
-		Code c = new Code(model); //20
+	public Code textToCode(String s) throws Exception {
+//		Code c = new Code(model); //20
+//		
+//		try {
+//			String[] eingaben = s.split(" ");
+//			
+//			for(int i = 0; i < model.getLösungsanzahl(); i++) {
+//						int e = Integer.parseInt(eingaben[i]);
+//						c.setNummer(i,e);
+//			}
+//		}
+///*!!!*/	catch(Exception e) { // Ich muss rauskriegen, welche exceptions geworfen werden! //30
+//			fehlermeldung(); //kann die bitte was konkretes anzeigen?
+//			nächsteRundeBereit();
+//		}
+//		return c;
 		
-		try {
-			String[] eingaben = s.split(" ");
-			
-			for(int i = 0; i < model.getLösungsanzahl(); i++) {
-						int e = Integer.parseInt(eingaben[i]);
-						c.setNummer(i,e);
-			}
+		String[] eingaben = s.split(" ");
+		Code c = new Code(model);
+	
+		for(int i = 0; i < model.getLösungsanzahl(); i++) {
+				int e = Integer.parseInt(eingaben[i]);
+				c.setNummer(i,e);
 		}
-/*!!!*/	catch(Exception e) { // Ich muss rauskriegen, welche exceptions geworfen werden! //30
-			fehlermeldung(); //kann die bitte was konkretes anzeigen?
-			nächsteRundeBereit();
+		if(c.isValid()) {
+			return c;
 		}
-		return c;
+		return null;
 	}
 
 	public String textErzeugen() {

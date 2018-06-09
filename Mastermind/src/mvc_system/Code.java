@@ -27,7 +27,13 @@ public class Code {
 				nummern[1] != nummern[4] &&
 				nummern[2] != nummern[3] &&
 				nummern[2] != nummern[4] &&
-				nummern[3] != nummern[4];
+				nummern[3] != nummern[4] &&
+				
+				nummern[0] > 0 && nummern[0] < model.getZahlenbereich() &&
+				nummern[1] > 0 && nummern[1] < model.getZahlenbereich() &&				
+				nummern[2] > 0 && nummern[2] < model.getZahlenbereich() &&
+				nummern[3] > 0 && nummern[3] < model.getZahlenbereich() &&
+				nummern[4] > 0 && nummern[4] < model.getZahlenbereich();
 	}
 
 	public void setNummer (int stelle, int nummer) {

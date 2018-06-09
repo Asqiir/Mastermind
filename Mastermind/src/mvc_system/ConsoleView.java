@@ -29,14 +29,15 @@ public class ConsoleView extends TextView {
 		
 		try {
 			do {
-				s = reader.readLine();
-				String[] eingaben = s.split(" ");
-				c = new Code(model);
-			
-				for(int i = 0; i < model.getLösungsanzahl(); i++) {
-						int e = Integer.parseInt(eingaben[i]);
-						c.setNummer(i,e);
-				}
+//				s = reader.readLine();
+//				String[] eingaben = s.split(" ");
+//				c = new Code(model);
+//			
+//				for(int i = 0; i < model.getLösungsanzahl(); i++) {
+//						int e = Integer.parseInt(eingaben[i]);
+//						c.setNummer(i,e);
+//				}
+				c = textToCode(reader.readLine());
 			} while(c == null || !c.isValid());
 			fireEvent(c);
 		}

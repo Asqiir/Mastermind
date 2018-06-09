@@ -36,7 +36,11 @@ public class FrameView extends TextView implements ActionListener {
 		inText.setText("");
 		inText.requestFocus();
 		
-		fireEvent(textToCode(s));		
+		try {
+			fireEvent(textToCode(s));		
+		} catch(Exception ex) {
+			
+		}
 	}
 	//50
 	String fehlerText = "Ein Fehler ist aufgetreten. Dies kann an ihrer Eingabe liegen. \n Bitte geben sie" +
