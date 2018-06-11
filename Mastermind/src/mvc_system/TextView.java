@@ -33,7 +33,7 @@ public abstract class TextView extends View {
 //		}
 //		return c;
 		
-		String[] eingaben = s.split(" ");
+		String[] eingaben = s.split(" "); 
 		Code c = new Code(model);
 	
 		for(int i = 0; i < model.getLösungsanzahl(); i++) {
